@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppModule">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-repeat</title>
+	<style type="text/css">
+		div{
+			align-content: center;
+			background-color: skyblue;
+			height: 100%;
+			width: 100%;
+			}
+		a{
+			font-color:white;
+		 }
+	</style>
+	<script type="text/javascript" src="angular.js">  </script>
+	<script type="text/javascript">
+		var m1=angular.module("AppModule",[]);
+		m1.controller("c1",f1);
+		function f1($scope){
+			$scope.names=["stackoverflow","google","apple","android","web development"];
+
+		}
+	</script>
+</head>
+<body ng-controller="c1">
+	<div ng-repeat="t in names">
+	<table align="center" border="1" bgcolor="green">
+		<tr> <th> <font size="8" face="chiller" color="white">
+			
+			<a href="https://stackoverflow.com/">{{t}}</a>  
+
+		</font></th> </tr>
+		</table>
+	</div>
+	
+</body>
+</html>

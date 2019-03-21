@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppModule">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript">
+		var m1=angular.module("AppModule",[]);
+		m1.controller("c1",f1);
+		function f1($scope){
+			$scope.message="first example"
+			$scope.id=100
+		}
+	</script>
+</head>
+<body ng-controller=c1>
+	{{message}}
+	<br><br>
+	{{id}}
+</body>
+</html>

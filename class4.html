@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppModule">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-clickchenge</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript">
+		var m1=angular.module("AppModule",[]);
+		m1.controller("c1",f1);
+		function f1($scope){
+			$scope.countries=["USA","IND","UAE","EUR"];
+
+			$scope.m1=function(){
+				$scope.banks=["ICICI","HDFC","SBI","AXIS"];
+			}
+		}
+	</script>
+</head>
+<body ng-controller="c1">
+	<div align="center">
+	<select>
+		<option ng-repeat="t in countries">
+			{{t}}
+		</option>
+	</select>
+	<button ng-click="m1()">click for banks</button>
+		<ol><li ng-repeat="bank in banks">{{bank}}</li></ol>
+	
+	</div>
+</body>
+</html>

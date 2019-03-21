@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppModule">
+<head>
+	<meta charset="UTF-8">
+	<title>data handling</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript">
+		var m1=angular.module("AppModule",[]);
+		m1.controller("c1",f1);
+		function f1($scope){
+			$scope.login={};
+				alert(login.username+"_"+login.password);
+		}
+	</script>
+</head>
+<body ng-controller="c1">
+	<form>
+	username: <input type="text" name="username" ng-model="login.username"> <br>
+	password: <input type="password" name="password" ng-model="login.password"> <br>
+	<button ng-click="login();">login</button>
+	</form>
+</body>
+</html>
